@@ -16,7 +16,7 @@ export default ({ postId }) => {
 
   return (
     <div>
-      <form onSubmitHandler={onSubmitHandler}>
+      <form onSubmit={onSubmitHandler}>
         <div className='form-group'>
           <label>New Comment</label>
           <input
@@ -25,7 +25,7 @@ export default ({ postId }) => {
             className='form-control'
           />
         </div>
-        <button className='btn btn-outline-info'>Submit</button>
+        <button className='btn btn-primary'>Submit</button>
       </form>
     </div>
   );

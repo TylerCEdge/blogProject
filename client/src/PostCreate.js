@@ -13,6 +13,7 @@ export default () => {
 
     setTitle('');
   };
+
   return (
     <div>
       <form onSubmit={onSubmitHandler}>
@@ -24,7 +25,7 @@ export default () => {
             className='form-control'
           />
         </div>
-        <button className='btn btn-outline-primary'>Submit</button>
+        <button className='btn btn-primary'>Submit</button>
       </form>
     </div>
   );
