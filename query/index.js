@@ -29,7 +29,7 @@ app.post('/events', (req, res) => {
   }
 
   if (type === 'CommentUpdated') {
-    const { id, postId, status, content } = data;
+    const { id, content, postId, status } = data;
 
     const post = posts[postId];
     const comment = post.comments.find((comment) => {
@@ -46,5 +46,5 @@ app.post('/events', (req, res) => {
 });
 
 app.listen(4002, () => {
-  console.log('Listening on 4002');
+  console.log('Listening on port 4002.');
 });

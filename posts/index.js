@@ -35,7 +35,7 @@ app.post('/posts', async (req, res) => {
 });
 
 app.post('/events', (req, res) => {
-  console.log('Recieved Event', req.body.type);
+  console.log('Event Recieved:', req.body.type);
 
   res.send({});
 });

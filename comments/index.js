@@ -38,7 +38,7 @@ app.post('/posts/:id/comments', async (req, res) => {
 });
 
 app.post('/events', async (req, res) => {
-  console.log('Event Recieved:', req.body.type);
+  console.log('Event Received:', req.body.type);
 
   const { type, data } = req.body;
 
@@ -49,10 +49,9 @@ app.post('/events', async (req, res) => {
     const comment = comments.find((comment) => {
       return comment.id === id;
     });
-
     comment.status = status;
 
-    await axios.post('http://localhost:4005', {
+    await axios.post('http://localhost:4005/events', {
       type: 'CommentUpdated',
       data: {
         id,
@@ -67,5 +66,5 @@ app.post('/events', async (req, res) => {
 });
 
 app.listen(4001, () => {
-  console.log('Listening on 4001');
+  console.log('Listening on port 4001.');
 });

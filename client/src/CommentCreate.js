@@ -25,7 +25,7 @@ export default ({ postId }) => {
             className='form-control'
           />
         </div>
-        <button className='btn btn-primary'>Submit</button>
+        <button className='btn btn-info'>Submit</button>
       </form>
     </div>
   );
